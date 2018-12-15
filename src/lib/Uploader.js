@@ -3,14 +3,19 @@ const FormData = require('form-data');
 const isStream = require('is-stream');
 
 module.exports = class Uploader{
+    /**
+     *
+     * @param {string} token - API Token. Get yours from https://discordimages.com/
+     */
     constructor(token){
-        if(!token) return new Error("No Token Specified");
+        if(!token) throw new Error("No Token Specified");
+        if (typeof token !== 'string' || !token instanceof String) throw new TypeError("The Given param Isnt A String!")
         this.token = token;
         this.form = new FormData();
     };
 
     async upload(file){
-        if(!isStream.readable(file)) return new TypeError("Given File Is Not A Valid Readable Stream.");
+        if(!isStream.readable(file)) throw new TypeError("Given File Is Not A Valid Readable Stream.");
         this.form.append('files[]',file);
         let json = await fetch('https://discordimages.com/api/upload',{
             method: 'POST',

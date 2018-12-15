@@ -1,3 +1,3 @@
 const { Uploader } = require('../src/index');
 
-new Uploader()
+let DI = new Uploader();
