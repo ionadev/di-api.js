@@ -1,0 +1,14 @@
+{
+  "name": "di-api.js",
+  "version": "0.1.0",
+  "description": "An API Wrapper For Discord Images",
+  "main": "src/index.js",
+  "repository": "https://github.com/ionadev/di-api.js",
+  "author": "Piyush Bhangale",
+  "license": "MIT",
+  "dependencies": {
+    "form-data": "^2.3.3",
+    "is-stream": "^1.1.0",
+    "node-fetch": "^2.3.0"
+  }
+}
