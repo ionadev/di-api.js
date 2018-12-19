@@ -15,7 +15,8 @@ module.exports = class Uploader{
     };
 
     async upload(file){
-        //if(!isStream.readable(file)) throw new TypeError("Given File Is Not A Valid Readable Stream.");
+        if(!file) throw new Error("No File Stream Has Been Provided");
+        if(!isStream.readable(file)) throw new TypeError("Given File Is Not A Valid Readable Stream.");
         this.form.append('files[]',file);
         let json = await fetch('https://discordimages.com/api/upload',{
             method: 'POST',
@@ -30,7 +31,7 @@ module.exports = class Uploader{
 
     async  getUserStats(){
         let json = await fetch('https://discordimages.com/api/storage/information',{
-            method: 'POST',
+            //this is a get request and would only require the token!
             headers: {
                 "token": this.token
             }
