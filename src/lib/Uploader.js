@@ -28,7 +28,7 @@ module.exports = class Uploader{
         return json;
     }
 
-    async  getUserStats(){
+    async  getMyStats(){
         let json = await fetch('https://discordimages.com/api/storage/information',{
             method: 'POST',
             headers: {
