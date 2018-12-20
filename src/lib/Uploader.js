@@ -29,7 +29,7 @@ module.exports = class Uploader{
         return json;
     }
 
-    async  getUserStats(){
+    async  getMyStats(){
         let json = await fetch('https://discordimages.com/api/storage/information',{
             //this is a get request and would only require the token!
             headers: {
