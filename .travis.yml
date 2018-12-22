@@ -1,1 +1,9 @@
 language: node_js
+deploy:
+  provider: npm
+  email: bhangalepiyush@gmail.com
+  api_key:
+    secure: l5tnWR75hk+bIK+kDTNRw3SbyinvK+G/ePccI503lxmr+SwM17I/mhKqVoD/ZmYsooIzLTggzzW4y01/pEBT8ksKgV5JYomonVKa5Kuq8YRRt9yYjg2ZUCazZQNM8KFpAiivCjoUEA9o4eHgYFM0ne+zYlwh57GcWvD7XQuT55aHrIncJ9wNOY+XSILQKRhuv9O+xv96bh92kgvGFcpuu2SYv3VV4hbQHWP+eoio6Z0Bk5MK9jueCaxpe6clnlLDO4cjjHpeugf1B9PegMn4K+34S/PyDSho9/wmGyu+4WlzFK638bVIu9oT3Own/6X40H2GtZZaaukHhW8AeR8aeOcin1jcQui/zZKNxP5q5cDrH753LY9aolllFsum5thQKAGIHrTFqUQoBHWI5ChJz0FOxa4abM4A55F2sYrNOmYTJ5v/YvJgjcwzECx+UuUbdNhrFlD8QKp/iM/d0kahx9mODgolcZ0w2iYney2PwjIyMCqulfHFDw6pcVWXZgnJ1JG6lSG/YzkcPAeGQWS4M09r6MAD7HKbuRlmyAZrhNsmrqwgsGo1uXM2lEyI5Mb0R2GCmkrQB2fuk3CTfQHIkFrA/b8qBRtI+5zjXW3kC6I4XUgtsKFyCNlZWC3O5Pn+1bQIMlFEJoXqygu7blX9Az7Tx4tUcE5uhoGWZnepniI=
+  on:
+    repo: ionadev/di-api.js
+    branch: stable
