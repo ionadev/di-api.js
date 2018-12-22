@@ -9,3 +9,5 @@ isStream.readable = stream =>
 	stream.readable !== false &&
 	typeof stream._read === 'function' &&
 	typeof stream._readableState === 'object';
+
+module.exports = isStream;
