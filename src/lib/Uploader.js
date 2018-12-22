@@ -14,19 +14,17 @@ module.exports = class Uploader{
         this.form = new FormData();
     };
 
-    async upload(file){
+    upload(file){
         if(!file) throw new Error("No file stream was provided in the upload.");
         if(!isStream.readable(file)) throw new TypeError("The given file is not a readable stream.");
         this.form.append('files[]',file);
-        let json = await fetch('https://discordimages.com/api/upload',{
+        return fetch('https://discordimages.com/api/upload',{
             method: 'POST',
             body: this.form,
             headers: {
                 "token": this.token
             }
         }).then(res => res.json());
-
-        return json;
     }
 
     async  getMyStats(){
