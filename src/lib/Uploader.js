@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const FormData = require('form-data');
-const isStream = require('is-stream');
+const isStream = require('./extensions/stream');
 
 module.exports = class Uploader{
     /**
