@@ -9,14 +9,14 @@ module.exports = class Uploader{
      */
     constructor(token){
         if(!token) throw new Error("No Token Specified");
-        if (typeof token !== 'string' || !token instanceof String) throw new TypeError("The Given param Isnt A String!")
+        if (typeof token !== 'string' || !token instanceof String) throw new TypeError("Whoops! That wasn't a string.")
         this.token = token;
         this.form = new FormData();
     };
 
     async upload(file){
-        if(!file) throw new Error("No File Stream Has Been Provided");
-        if(!isStream.readable(file)) throw new TypeError("Given File Is Not A Valid Readable Stream.");
+        if(!file) throw new Error("No file stream was provided in the upload.");
+        if(!isStream.readable(file)) throw new TypeError("The given file is not a readable stream.");
         this.form.append('files[]',file);
         let json = await fetch('https://discordimages.com/api/upload',{
             method: 'POST',
@@ -29,9 +29,8 @@ module.exports = class Uploader{
         return json;
     }
 
-    async  getUserStats(){
+    async  getMyStats(){
         let json = await fetch('https://discordimages.com/api/storage/information',{
-            //this is a get request and would only require the token!
             headers: {
                 "token": this.token
             }
