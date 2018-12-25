@@ -1,10 +1,10 @@
 {
   "name": "di-api.js",
-<<<<<<< HEAD
-  "version": "0.2.1",
-=======
+
+ 
+
   "version": "1.0.0",
->>>>>>> 4cc828375d7820eff5cb398e5fe19eeee90e9e1d
+
   "description": "An API Wrapper For Discord Images",
   "main": "src/index.js",
   "scripts": {
