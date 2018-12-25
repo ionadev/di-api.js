@@ -2,7 +2,7 @@
   "name": "di-api.js",
   "version": "1.1.0",
   "description": "An API Wrapper For Discord Images",
-  "main": "src/index.js",
+  "main": "src/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\""
   },
